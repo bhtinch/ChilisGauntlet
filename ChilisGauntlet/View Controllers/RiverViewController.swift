@@ -18,10 +18,11 @@ class RiverViewController: UIViewController {
     @IBOutlet weak var dreamJobLabel: UILabel!
     @IBOutlet weak var chilisJamLabel: UILabel!
     @IBOutlet weak var BioLabel: UILabel!
+    @IBOutlet weak var breakingBadImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let test = KingController.shared.loadFromPersistenceStore()
         
         if test == false {
@@ -34,6 +35,20 @@ class RiverViewController: UIViewController {
         updateViews(king: king)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        CharacterController.shared.fetchRandomCharacter { (result) in
+            switch result {
+            case .success(let character):
+                self.updateCharacterImage(character: character)
+                print(character)
+            case .failure(let error):
+                print(error.localizedDescription)
+            } // end of switch result
+        } // end of CharacterController.shared.fetchRandomCharacter
+    }
+    
     //  MARK: - Properties
     var king: King?
     
@@ -42,12 +57,28 @@ class RiverViewController: UIViewController {
         townLabel.text = king.homeTown
         ageLabel.text = king.age
         previousJobLabel.text = king.previousJob
-        //dreamJobLabel.text = king.dreamJob
+        dreamJobLabel.text = king.dreamJob
         chilisJamLabel.text = king.chilisJam
         BioLabel.text = king.bio
+        imageView.image = UIImage(imageLiteralResourceName: RiverConstants.imageString)
     }
     
-
+    // MARK: - Helper Methods
+    func updateCharacterImage(character: Character) {
+        CharacterController.shared.fetchCharacterImage (character: character) { (result) in
+            DispatchQueue.main.async {
+                switch result{
+                case .success(let img):
+                    self.breakingBadImageView.image = img
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRiverEditVC" {
@@ -55,7 +86,19 @@ class RiverViewController: UIViewController {
             
             guard let king = self.king else { return }
             destination?.king = king
+            destination?.delegate = self
         }
     }
+}
 
+extension RiverViewController: EditKingViewControllerDelegate{
+    func updatePageWith(name: String, age: String, town: String, previousJob: String, dreamJob: String, chilisJam: String, bio: String) {
+        nameLabel.text = name
+        townLabel.text = town
+        ageLabel.text = age
+        previousJobLabel.text = previousJob
+        dreamJobLabel.text = dreamJob
+        chilisJamLabel.text = chilisJam
+        BioLabel.text = bio
+    }
 }

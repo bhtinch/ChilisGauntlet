@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EditKingViewControllerDelegate: AnyObject {
+    func updatePageWith(name: String, age: String, town: String, previousJob: String, dreamJob: String, chilisJam: String, bio: String)
+}
+
 class EditKingViewController: UIViewController {
     //  MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -17,7 +21,6 @@ class EditKingViewController: UIViewController {
     @IBOutlet weak var chilisJamTextField: UITextField!
     @IBOutlet weak var bioTextView: UITextView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,6 +29,10 @@ class EditKingViewController: UIViewController {
         super.viewWillAppear(true)
         updateViews()
     }
+    
+    //  MARK: - Properties
+    var king: King?
+    weak var delegate: EditKingViewControllerDelegate?
     
     //  MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -39,9 +46,10 @@ class EditKingViewController: UIViewController {
               let bio = bioTextView.text, !bio.isEmpty else { return }
         
         KingController.shared.updateKingWith(king: king, name: name, age: age, hometown: town, previousJob: previousJob, dreamJob: dreamJob, chilisJam: chilisJam, bio: bio)
+        
+        delegate?.updatePageWith(name: name, age: age, town: town, previousJob: previousJob, dreamJob: dreamJob, chilisJam: chilisJam, bio: bio)
+        navigationController?.popViewController(animated: true)
     }
-    
-    var king: King?
     
     func updateViews() {
         guard let king = king else { return }
@@ -54,16 +62,5 @@ class EditKingViewController: UIViewController {
         chilisJamTextField.text = king.chilisJam
         bioTextView.text = king.bio
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
