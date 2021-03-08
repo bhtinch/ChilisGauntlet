@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		620B7B8D25F68A2100B22310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620B7B8C25F68A2100B22310 /* AppDelegate.swift */; };
 		620B7B8F25F68A2100B22310 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620B7B8E25F68A2100B22310 /* SceneDelegate.swift */; };
-		620B7B9125F68A2100B22310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620B7B9025F68A2100B22310 /* ViewController.swift */; };
 		620B7B9425F68A2100B22310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620B7B9225F68A2100B22310 /* Main.storyboard */; };
 		620B7B9625F68A2200B22310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620B7B9525F68A2200B22310 /* Assets.xcassets */; };
 		620B7B9925F68A2200B22310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620B7B9725F68A2200B22310 /* LaunchScreen.storyboard */; };
+		62EF72ED25F692C1002E6A4C /* RiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF72EC25F692C1002E6A4C /* RiverViewController.swift */; };
+		62EF72F025F692DE002E6A4C /* ChristianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF72EF25F692DE002E6A4C /* ChristianViewController.swift */; };
+		62EF72F325F692E4002E6A4C /* BenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF72F225F692E4002E6A4C /* BenViewController.swift */; };
+		62EF72F625F69A1E002E6A4C /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF72F525F69A1E002E6A4C /* King.swift */; };
+		62EF72F925F69A5B002E6A4C /* KingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF72F825F69A5B002E6A4C /* KingController.swift */; };
+		62EF72FD25F6A641002E6A4C /* EditKingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF72FC25F6A641002E6A4C /* EditKingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		620B7B8925F68A2100B22310 /* ChilisGauntlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChilisGauntlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		620B7B8C25F68A2100B22310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		620B7B8E25F68A2100B22310 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		620B7B9025F68A2100B22310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		620B7B9325F68A2100B22310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		620B7B9525F68A2200B22310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620B7B9825F68A2200B22310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		620B7B9A25F68A2200B22310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62EF72EC25F692C1002E6A4C /* RiverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverViewController.swift; sourceTree = "<group>"; };
+		62EF72EF25F692DE002E6A4C /* ChristianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristianViewController.swift; sourceTree = "<group>"; };
+		62EF72F225F692E4002E6A4C /* BenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenViewController.swift; sourceTree = "<group>"; };
+		62EF72F525F69A1E002E6A4C /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		62EF72F825F69A5B002E6A4C /* KingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingController.swift; sourceTree = "<group>"; };
+		62EF72FC25F6A641002E6A4C /* EditKingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		620B7B8B25F68A2100B22310 /* ChilisGauntlet */ = {
 			isa = PBXGroup;
 			children = (
-				620B7B8C25F68A2100B22310 /* AppDelegate.swift */,
-				620B7B8E25F68A2100B22310 /* SceneDelegate.swift */,
-				620B7B9025F68A2100B22310 /* ViewController.swift */,
-				620B7B9225F68A2100B22310 /* Main.storyboard */,
-				620B7B9525F68A2200B22310 /* Assets.xcassets */,
-				620B7B9725F68A2200B22310 /* LaunchScreen.storyboard */,
-				620B7B9A25F68A2200B22310 /* Info.plist */,
+				620B7BA325F68B0200B22310 /* Models */,
+				620B7BA425F68B1100B22310 /* Model Controllers */,
+				620B7BA625F68B2700B22310 /* Views */,
+				620B7BA525F68B1700B22310 /* View Controllers */,
+				620B7BA125F68ADF00B22310 /* Resources */,
 			);
 			path = ChilisGauntlet;
+			sourceTree = "<group>";
+		};
+		620B7BA125F68ADF00B22310 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				620B7B8C25F68A2100B22310 /* AppDelegate.swift */,
+				620B7B8E25F68A2100B22310 /* SceneDelegate.swift */,
+				620B7B9525F68A2200B22310 /* Assets.xcassets */,
+				620B7B9A25F68A2200B22310 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		620B7BA325F68B0200B22310 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62EF72F525F69A1E002E6A4C /* King.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		620B7BA425F68B1100B22310 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62EF72F825F69A5B002E6A4C /* KingController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		620B7BA525F68B1700B22310 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62EF72EC25F692C1002E6A4C /* RiverViewController.swift */,
+				62EF72EF25F692DE002E6A4C /* ChristianViewController.swift */,
+				62EF72F225F692E4002E6A4C /* BenViewController.swift */,
+				62EF72FC25F6A641002E6A4C /* EditKingViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		620B7BA625F68B2700B22310 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				620B7BA725F68B2D00B22310 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		620B7BA725F68B2D00B22310 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				620B7B9225F68A2100B22310 /* Main.storyboard */,
+				620B7B9725F68A2200B22310 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				620B7B9125F68A2100B22310 /* ViewController.swift in Sources */,
+				62EF72F025F692DE002E6A4C /* ChristianViewController.swift in Sources */,
+				62EF72ED25F692C1002E6A4C /* RiverViewController.swift in Sources */,
+				62EF72F925F69A5B002E6A4C /* KingController.swift in Sources */,
+				62EF72F625F69A1E002E6A4C /* King.swift in Sources */,
 				620B7B8D25F68A2100B22310 /* AppDelegate.swift in Sources */,
+				62EF72FD25F6A641002E6A4C /* EditKingViewController.swift in Sources */,
+				62EF72F325F692E4002E6A4C /* BenViewController.swift in Sources */,
 				620B7B8F25F68A2100B22310 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QYHXM7HJ4V;
-				INFOPLIST_FILE = ChilisGauntlet/Info.plist;
+				INFOPLIST_FILE = ChilisGauntlet/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QYHXM7HJ4V;
-				INFOPLIST_FILE = ChilisGauntlet/Info.plist;
+				INFOPLIST_FILE = ChilisGauntlet/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
